@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.editorController"
+            prefHeight="400.0" prefWidth="600.0" >
+<BorderPane styleClass="master-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+
+            prefWidth="600"
+            prefHeight="400"
+>
+
+    <center>
+        <TextArea fx:id="textArea" nodeOrientation="LEFT_TO_RIGHT" styleClass="editor-text" wrapText="true">
+            <font>
+                <Font name="SansSerif Regular" size="15.0"/>
+            </font>
+            <effect>
+                <InnerShadow  choke="0.46" color="#010103" height="19.4" radius="7.375" width="12.1" />
+            </effect>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </TextArea>
+    </center>
+
+
+    <top>
+<MenuBar prefWidth="600" prefHeight="25.0" BorderPane.alignment="CENTER" >
+<Menu text="Fichier">
+    <MenuItem fx:id="newFile" mnemonicParsing="false" text="nouveau">
+        <accelerator>
+            <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+        </accelerator>
+    </MenuItem>
+    <MenuItem fx:id="ipenFile" mnemonicParsing="false" text="ouvrire">
+        <accelerator>
+            <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+        </accelerator>
+    </MenuItem>
+
+    <MenuItem fx:id="save" mnemonicParsing="false" text="sauvgarder">
+        <accelerator>
+            <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+        </accelerator>
+    </MenuItem>
+
+
+</Menu>
+
+<Menu mnemonicParsing="false" text="Editer">
+    <items>
+        <Menu  mnemonicParsing="false" text="Font ..." >
+            <items>
+                <CheckMenuItem mnemonicParsing="false" fx:id="small" text="petit (14px)"/>
+                <CheckMenuItem mnemonicParsing="false" fx:id="default" text="par default(22px)"  />
+                <CheckMenuItem mnemonicParsing="false" fx:id="large" text=" grand (30px)"/>
+
+            </items>
+
+
+        </Menu>
+    </items>
+</Menu>
+    <Menu mnemonicParsing="false" text="Info">
+        <MenuItem mnemonicParsing="false" text="a propot" />
+
+
+    </Menu>
+
+
+</MenuBar>
+
+    </top>
+
+</BorderPane>
+</AnchorPane>

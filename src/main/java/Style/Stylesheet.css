@@ -1,0 +1,32 @@
+/*** couleur du background  ***/
+.master-pane {
+-fx-background-color :  #2e3749;
+}
+/*** classe de style de la zone de text***/
+.text-area {
+-fx-text-fill : #B4C4D0;
+-fx-text-family : "cursive";
+-fx-focus-color : transparent;
+}
+
+.menu .label {
+-fx-text-fill : #D1D6C5;
+
+}
+
+menu-bar : hover , .menu-item : hover {
+-fx-background-color : #3d4456;
+}
+
+.menu-bar{
+-fx-background-color : #1d273d;
+-fx-font-family  : "cursive";
+-fx-font-size : 16;
+
+}
+
+.text-area .content {
+-fx-background-color : #393939;
+
+}
+
